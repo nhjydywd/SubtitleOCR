@@ -5,10 +5,9 @@ English | [简体中文](README.md)
 Extracting hardcode subtitles in videos using Optical Character Recognition(OCR), and converting to independent '.srt' files.
 
 ## Demo Video
-<video controls>
-  <source src="docs/tutorial.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+The video is too big. Please go to [BiliBili](https://www.bilibili.com/video/BV1dJ2rYPEKP/) to watch it.
+
+<img src="docs/tutorial.png" alt="tutorial" style="max-height: 300px;">
 
 ## Install & Run
 Get source code：

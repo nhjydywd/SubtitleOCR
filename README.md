@@ -4,15 +4,13 @@
 # 望言OCR
 
 基于光学字符识别（OCR）技术将视频中嵌入的硬字幕提取为独立的SRT文件。
-<img src="docs/gui.png" alt="models文件夹" style="max-height: 300px;">
+<img src="docs/gui.png" alt="gui" style="max-height: 300px;">
 
 ## 视频演示
-如遇视频无法加载，请前往[哔哩哔哩](https://www.bilibili.com/video/BV1dJ2rYPEKP/)进行观看。
+因视频过大，请前往[哔哩哔哩](https://www.bilibili.com/video/BV1dJ2rYPEKP/)进行观看。
 
-<video controls style="max-height: 300px;">
-  <source src="docs/tutorial.mp4" type="video/mp4" >
-  Your browser does not support the video tag.
-</video>
+<img src="docs/tutorial.png" alt="tutorial" style="max-height: 300px;">
+
 
 ## 安装 & 运行
 获取源码：

@@ -2,3 +2,4 @@ opencv-python
 paddlepaddle-gpu
 paddleocr
 pyqt6
+distance
