@@ -5,7 +5,7 @@ English | [简体中文](README.md)
 Extracting hardcode subtitles in videos using Optical Character Recognition(OCR), and converting to independent '.srt' files.
 
 ## Video Tutorial
-The video is too big. Please go to [BiliBili](https://www.bilibili.com/video/BV1dJ2rYPEKP/) to watch it.
+The video is too large. Please go to [BiliBili](https://www.bilibili.com/video/BV1dJ2rYPEKP/) to watch it.
 
 <img src="docs/tutorial.png" alt="tutorial" style="max-height: 300px;">
 
