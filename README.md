@@ -6,6 +6,11 @@
 基于光学字符识别（OCR）技术将视频中嵌入的硬字幕提取为独立的SRT文件。
 <img src="docs/gui.png" alt="gui" style="max-height: 300px;">
 
+## 特点
+* 🔄 多语字幕：支持为每个字幕指定单独的语言。
+* 🚀 GPU加速：充分利用显卡的算力。
+* 🔍 准确提取：基于字幕锚点（中心点）进行字幕选取，相比传统的基于矩形框选取，显著增强对画面中无关文字的过滤能力。
+
 ## 视频教程
 因视频过大，请前往[哔哩哔哩](https://www.bilibili.com/video/BV1dJ2rYPEKP/)进行观看。
 
@@ -44,11 +49,6 @@ Note: English users can use this command to launch an English GUI：
 python ./launch_gui.py --lang en
 ```
 
-
-## 特点
-* 🔄 多语字幕：支持为每个字幕指定单独的语言。
-* 🚀 GPU加速：充分利用显卡的算力。
-* 🔍 准确提取：基于字幕锚点（中心点）进行字幕选取，相比传统的基于矩形框选取，显著增强对画面中无关文字的过滤能力。
 
 
 ## 鸣谢
