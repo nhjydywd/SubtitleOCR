@@ -6,7 +6,7 @@
 基于光学字符识别（OCR）技术将视频中嵌入的硬字幕提取为独立的SRT文件。
 <img src="docs/gui.png" alt="gui" style="max-height: 300px;">
 
-## 视频演示
+## 视频教程
 因视频过大，请前往[哔哩哔哩](https://www.bilibili.com/video/BV1dJ2rYPEKP/)进行观看。
 
 <img src="docs/tutorial.png" alt="tutorial" style="max-height: 300px;">
