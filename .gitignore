@@ -1,0 +1,13 @@
+**/**.pyc
+.DS_Store
+
+*.pdiparams
+*.pdiparams.info
+*.pdmodel
+*.tar
+
+test/images
+test/images_words
+test/videos
+
+output
