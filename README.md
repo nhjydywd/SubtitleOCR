@@ -7,7 +7,7 @@
 <img src="docs/gui.png" alt="models文件夹" style="max-height: 300px;">
 
 ## 视频演示
-If the video cannot be loaded, please go to [Bilibili](https://www.bilibili.com/video/BV1dJ2rYPEKP/) to watch it.
+如遇视频无法加载，请前往[哔哩哔哩](https://www.bilibili.com/video/BV1dJ2rYPEKP/)进行观看。
 
 <video controls style="max-height: 300px;">
   <source src="docs/tutorial.mp4" type="video/mp4" >
