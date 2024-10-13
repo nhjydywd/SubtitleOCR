@@ -2,7 +2,7 @@ English | [简体中文](README.md)
 
 # SubtitleOCR
 
-Extracting hardcode subtitles in videos using Optical Character Recognition(OCR), and converting to independent '.srt' files.
+Extracting hardcode subtitles in videos using Optical Character Recognition(OCR), and converting them to independent '.srt' files.
 <img src="docs/gui.png" alt="gui" style="max-height: 300px;">
 
 ## Features
