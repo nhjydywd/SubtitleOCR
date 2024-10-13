@@ -35,7 +35,7 @@ If the download failed, you need to go to [the official site of PaddleOCR](https
 
 After downloading, the `models` directory should be like:
 
-![models文件夹](docs/models.png)
+<img src="docs/models.png" alt="models" style="max-height: 200px;">
 
 
 Finally, launch the GUI:

@@ -36,7 +36,8 @@ python ./download_models.py
 
 正常完成这一步后，models文件夹应当具有如下结构：
 
-![models文件夹](docs/models.png)
+<img src="docs/models.png" alt="models" style="max-height: 200px;">
+
 
 
 最后，就可以启动GUI了
