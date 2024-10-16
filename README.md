@@ -18,29 +18,29 @@
 
 
 ## 安装 & 运行
-获取源码：
+### 1. 获取源码：
 ```
 git clone https://github.com/nhjydywd/SubtitleOCR
 cd SubtitleOCR
 ```
-安装依赖项：
+
+### 2. 安装依赖项：
 ```
 pip install -r requirements.txt
 ```
+注：如果PaddlePaddle报错，建议您参照[官方文档](https://www.paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/pip/windows-pip.html)进行安装
 
-下载模型（后续启动可以跳过这一步）
+### 3. 下载模型（后续启动可以跳过这一步）
 ```
 python ./download_models.py
 ```
-如果下载不成功，则需要您手动前往[PaddleOCR官网](https://paddlepaddle.github.io/PaddleOCR/main/ppocr/model_list.html)下载模型
-
-正常完成这一步后，models文件夹应当具有如下结构：
+如果下载不成功，则需要您手动前往[PaddleOCR官网](https://paddlepaddle.github.io/PaddleOCR/main/ppocr/model_list.html)下载模型。正常完成这一步后，models文件夹应当具有如下结构：
 
 <img src="docs/models.png" alt="models" style="max-height: 200px;">
 
 
 
-最后，就可以启动GUI了
+### 4. 启动GUI
 ```
 python ./launch_gui.py
 ```
