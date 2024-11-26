@@ -5,8 +5,8 @@
 
 望言OCR是一款全新的硬字幕提取工具，旨在加速AI时代下的视频硬字幕数据挖掘工作。
 
-<div style="text-align: center;">
-  <img src="docs/AppIcon_128pt.png" style="max-height: 80px;max-width: 80px;">
+<div align="center">
+  <img src="docs/AppIcon_512pt.png" style="max-height: 80px;max-width: 80px;">
 </div>
 
 ⚡️快如闪电，仅需Apple m1芯片即可达到x9的提取速度（即9倍速提取）。
