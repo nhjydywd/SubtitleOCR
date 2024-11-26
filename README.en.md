@@ -5,10 +5,6 @@ English | [简体中文](README.md)
 Extracting hardcode subtitles in videos using Optical Character Recognition(OCR), and converting them to independent '.srt' files.
 <img src="docs/gui.png" alt="gui" style="max-height: 300px;">
 
-## Features
-* 🔄 Multilanguage Subtitles：can assign different languages for each row of subtitle.
-* 🚀 GPU Support：take advantage of GPU acceleration。
-* 🔍 Accurate：subtitle selection based on the anchor (center point) significantly enhances the ability to filter irrelevant text in the picture compared to traditional selection based on rectangular areas.
 
 ## Video Tutorial
 The video is too large. Please go to [BiliBili](https://www.bilibili.com/video/BV1dJ2rYPEKP/) to watch it.
