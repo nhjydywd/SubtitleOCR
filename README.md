@@ -31,7 +31,7 @@
 
 ## 下载使用
 
-**Mac用户**：[点此处下载mac版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/v1.1#:~:text=subocr_macos_v1.1.zip)
+**Mac用户**：[点此处下载mac版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/v1.1.2)
 
 打开APP后，拖入要提取硬字幕的视频，等待提取完毕即可导出。
 <div style="text-align: center;">
