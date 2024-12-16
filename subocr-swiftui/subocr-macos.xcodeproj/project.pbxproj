@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9BCEDCE2CE95FE1005656CD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BCEDCD2CE95FE1005656CD /* AudioToolbox.framework */; };
+		C9BCEDD02CE95FE6005656CD /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BCEDCF2CE95FE6005656CD /* VideoToolbox.framework */; };
+		C9BCEDD22CE95FF9005656CD /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BCEDD12CE95FEF005656CD /* libbz2.tbd */; };
+		C9BCEDD42CE96007005656CD /* libcblas.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BCEDD32CE96004005656CD /* libcblas.tbd */; };
+		C9BCEDD62CE96011005656CD /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BCEDD52CE96011005656CD /* OpenCL.framework */; };
+		C9BCEDD82CE96040005656CD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BCEDD72CE96040005656CD /* CoreMedia.framework */; };
+		C9BCEDDA2CE9606D005656CD /* liblapack.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BCEDD92CE96069005656CD /* liblapack.tbd */; };
+		C9BCEDDC2CE9607C005656CD /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BCEDDB2CE96078005656CD /* libiconv.tbd */; };
+		C9DB86EE2D0FC3B500AF8EBB /* libtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB86ED2D0FC3B100AF8EBB /* libtest.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C9BCECF72CE958B9005656CD /* 望言OCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "望言OCR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9BCED682CE95E51005656CD /* libpostproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpostproc.a; path = ../../../Libs/FFmpeg/build/lib/libpostproc.a; sourceTree = "<group>"; };
+		C9BCED692CE95E51005656CD /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = ../../../Libs/FFmpeg/build/lib/libavutil.a; sourceTree = "<group>"; };
+		C9BCED6A2CE95E51005656CD /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = ../../../Libs/FFmpeg/build/lib/libavdevice.a; sourceTree = "<group>"; };
+		C9BCED6B2CE95E51005656CD /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = ../../../Libs/FFmpeg/build/lib/libavcodec.a; sourceTree = "<group>"; };
+		C9BCED6C2CE95E51005656CD /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = ../../../Libs/FFmpeg/build/lib/libswresample.a; sourceTree = "<group>"; };
+		C9BCED6D2CE95E51005656CD /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = ../../../Libs/FFmpeg/build/lib/libavformat.a; sourceTree = "<group>"; };
+		C9BCED6E2CE95E51005656CD /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = ../../../Libs/FFmpeg/build/lib/libavfilter.a; sourceTree = "<group>"; };
+		C9BCED6F2CE95E51005656CD /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = ../../../Libs/FFmpeg/build/lib/libswscale.a; sourceTree = "<group>"; };
+		C9BCEDCD2CE95FE1005656CD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C9BCEDCF2CE95FE6005656CD /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		C9BCEDD12CE95FEF005656CD /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		C9BCEDD32CE96004005656CD /* libcblas.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcblas.tbd; path = usr/lib/libcblas.tbd; sourceTree = SDKROOT; };
+		C9BCEDD52CE96011005656CD /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
+		C9BCEDD72CE96040005656CD /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		C9BCEDD92CE96069005656CD /* liblapack.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblapack.tbd; path = usr/lib/liblapack.tbd; sourceTree = SDKROOT; };
+		C9BCEDDB2CE96078005656CD /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		C9DB86ED2D0FC3B100AF8EBB /* libtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtest.a; path = ../test/build/libtest.a; sourceTree = "<group>"; };
+		C9DB87722D0FCF0C00AF8EBB /* anchors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = anchors.h; sourceTree = "<group>"; };
+		C9DB87732D0FCF0C00AF8EBB /* infer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = infer.h; sourceTree = "<group>"; };
+		C9DB87742D0FCF0C00AF8EBB /* ppocr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ppocr.h; sourceTree = "<group>"; };
+		C9DB87752D0FCF0C00AF8EBB /* producers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = producers.h; sourceTree = "<group>"; };
+		C9DB87762D0FCF0C00AF8EBB /* subocr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subocr.h; sourceTree = "<group>"; };
+		C9DB87772D0FCF0C00AF8EBB /* subocr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = subocr.cpp; sourceTree = "<group>"; };
+		C9DB87782D0FCF0C00AF8EBB /* subocr_impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subocr_impl.h; sourceTree = "<group>"; };
+		C9DB87792D0FCF0C00AF8EBB /* subocr_impl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = subocr_impl.cpp; sourceTree = "<group>"; };
+		C9DB877A2D0FCF0C00AF8EBB /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		C9DB877B2D0FCF0C00AF8EBB /* utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
+		C9DB877D2D0FCF0C00AF8EBB /* ffmpeg_decoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ffmpeg_decoder.h; sourceTree = "<group>"; };
+		C9DB877E2D0FCF0C00AF8EBB /* ffmpeg_decoder_impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ffmpeg_decoder_impl.h; sourceTree = "<group>"; };
+		C9DB877F2D0FCF0C00AF8EBB /* ffmpeg_decoder_impl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ffmpeg_decoder_impl.cpp; sourceTree = "<group>"; };
+		C9DB87812D0FCF0C00AF8EBB /* opencv_impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = opencv_impl.h; sourceTree = "<group>"; };
+		C9DB87822D0FCF0C00AF8EBB /* opencv_impl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = opencv_impl.cpp; sourceTree = "<group>"; };
+		C9DB87842D0FCF0C00AF8EBB /* clipper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = clipper.h; sourceTree = "<group>"; };
+		C9DB87852D0FCF0C00AF8EBB /* clipper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = clipper.cpp; sourceTree = "<group>"; };
+		C9DB87862D0FCF0C00AF8EBB /* postprocess_op.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = postprocess_op.h; sourceTree = "<group>"; };
+		C9DB87872D0FCF0C00AF8EBB /* postprocess_op.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = postprocess_op.cpp; sourceTree = "<group>"; };
+		C9DB87882D0FCF0C00AF8EBB /* utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
+		C9DB87892D0FCF0C00AF8EBB /* utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utility.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C9BCECF92CE958B9005656CD /* subocr-macos */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "subocr-macos";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9BCECF42CE958B9005656CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BCEDD02CE95FE6005656CD /* VideoToolbox.framework in Frameworks */,
+				C9BCEDD82CE96040005656CD /* CoreMedia.framework in Frameworks */,
+				C9BCEDCE2CE95FE1005656CD /* AudioToolbox.framework in Frameworks */,
+				C9BCEDD62CE96011005656CD /* OpenCL.framework in Frameworks */,
+				C9BCEDD42CE96007005656CD /* libcblas.tbd in Frameworks */,
+				C9BCEDD22CE95FF9005656CD /* libbz2.tbd in Frameworks */,
+				C9DB86EE2D0FC3B500AF8EBB /* libtest.a in Frameworks */,
+				C9BCEDDA2CE9606D005656CD /* liblapack.tbd in Frameworks */,
+				C9BCEDDC2CE9607C005656CD /* libiconv.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9BCECEE2CE958B9005656CD = {
+			isa = PBXGroup;
+			children = (
+				C9DB878B2D0FCF0C00AF8EBB /* subocr-alg */,
+				C9BCECF92CE958B9005656CD /* subocr-macos */,
+				C9BCECF82CE958B9005656CD /* Products */,
+				C9BCED672CE95E51005656CD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C9BCECF82CE958B9005656CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9BCECF72CE958B9005656CD /* 望言OCR.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9BCED672CE95E51005656CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB86ED2D0FC3B100AF8EBB /* libtest.a */,
+				C9BCEDDB2CE96078005656CD /* libiconv.tbd */,
+				C9BCEDD92CE96069005656CD /* liblapack.tbd */,
+				C9BCEDD72CE96040005656CD /* CoreMedia.framework */,
+				C9BCEDD52CE96011005656CD /* OpenCL.framework */,
+				C9BCEDD32CE96004005656CD /* libcblas.tbd */,
+				C9BCEDD12CE95FEF005656CD /* libbz2.tbd */,
+				C9BCEDCF2CE95FE6005656CD /* VideoToolbox.framework */,
+				C9BCEDCD2CE95FE1005656CD /* AudioToolbox.framework */,
+				C9BCED6B2CE95E51005656CD /* libavcodec.a */,
+				C9BCED6A2CE95E51005656CD /* libavdevice.a */,
+				C9BCED6E2CE95E51005656CD /* libavfilter.a */,
+				C9BCED6D2CE95E51005656CD /* libavformat.a */,
+				C9BCED692CE95E51005656CD /* libavutil.a */,
+				C9BCED682CE95E51005656CD /* libpostproc.a */,
+				C9BCED6C2CE95E51005656CD /* libswresample.a */,
+				C9BCED6F2CE95E51005656CD /* libswscale.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9DB877C2D0FCF0C00AF8EBB /* alg */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB87722D0FCF0C00AF8EBB /* anchors.h */,
+				C9DB87732D0FCF0C00AF8EBB /* infer.h */,
+				C9DB87742D0FCF0C00AF8EBB /* ppocr.h */,
+				C9DB87752D0FCF0C00AF8EBB /* producers.h */,
+				C9DB87762D0FCF0C00AF8EBB /* subocr.h */,
+				C9DB87772D0FCF0C00AF8EBB /* subocr.cpp */,
+				C9DB87782D0FCF0C00AF8EBB /* subocr_impl.h */,
+				C9DB87792D0FCF0C00AF8EBB /* subocr_impl.cpp */,
+				C9DB877A2D0FCF0C00AF8EBB /* utils.h */,
+				C9DB877B2D0FCF0C00AF8EBB /* utils.cpp */,
+			);
+			path = alg;
+			sourceTree = "<group>";
+		};
+		C9DB87802D0FCF0C00AF8EBB /* ffmpeg */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB877D2D0FCF0C00AF8EBB /* ffmpeg_decoder.h */,
+				C9DB877E2D0FCF0C00AF8EBB /* ffmpeg_decoder_impl.h */,
+				C9DB877F2D0FCF0C00AF8EBB /* ffmpeg_decoder_impl.cpp */,
+			);
+			path = ffmpeg;
+			sourceTree = "<group>";
+		};
+		C9DB87832D0FCF0C00AF8EBB /* opencv */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB87812D0FCF0C00AF8EBB /* opencv_impl.h */,
+				C9DB87822D0FCF0C00AF8EBB /* opencv_impl.cpp */,
+			);
+			path = opencv;
+			sourceTree = "<group>";
+		};
+		C9DB878A2D0FCF0C00AF8EBB /* ppocr */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB87842D0FCF0C00AF8EBB /* clipper.h */,
+				C9DB87852D0FCF0C00AF8EBB /* clipper.cpp */,
+				C9DB87862D0FCF0C00AF8EBB /* postprocess_op.h */,
+				C9DB87872D0FCF0C00AF8EBB /* postprocess_op.cpp */,
+				C9DB87882D0FCF0C00AF8EBB /* utility.h */,
+				C9DB87892D0FCF0C00AF8EBB /* utility.cpp */,
+			);
+			path = ppocr;
+			sourceTree = "<group>";
+		};
+		C9DB878B2D0FCF0C00AF8EBB /* subocr-alg */ = {
+			isa = PBXGroup;
+			children = (
+				C9DB877C2D0FCF0C00AF8EBB /* alg */,
+				C9DB87802D0FCF0C00AF8EBB /* ffmpeg */,
+				C9DB87832D0FCF0C00AF8EBB /* opencv */,
+				C9DB878A2D0FCF0C00AF8EBB /* ppocr */,
+			);
+			name = "subocr-alg";
+			path = "../subocr-alg/subocr-alg";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9BCECF62CE958B9005656CD /* subocr-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9BCED062CE958BC005656CD /* Build configuration list for PBXNativeTarget "subocr-macos" */;
+			buildPhases = (
+				C9BCECF32CE958B9005656CD /* Sources */,
+				C9BCECF42CE958B9005656CD /* Frameworks */,
+				C9BCECF52CE958B9005656CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C9BCECF92CE958B9005656CD /* subocr-macos */,
+			);
+			name = "subocr-macos";
+			packageProductDependencies = (
+			);
+			productName = "subocr-macos";
+			productReference = C9BCECF72CE958B9005656CD /* 望言OCR.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9BCECEF2CE958B9005656CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					C9BCECF62CE958B9005656CD = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = C9BCECF22CE958B9005656CD /* Build configuration list for PBXProject "subocr-macos" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9BCECEE2CE958B9005656CD;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C9BCECF82CE958B9005656CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9BCECF62CE958B9005656CD /* subocr-macos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9BCECF52CE958B9005656CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9BCECF32CE958B9005656CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C9BCED042CE958BC005656CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9BCED052CE958BC005656CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		C9BCED072CE958BC005656CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "subocr-macos/subocr_macos.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COREML_CODEGEN_LANGUAGE = "Objective-C";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"subocr-macos/Preview Content\"";
+				DEVELOPMENT_TEAM = 4AVV3V2B9M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/Users/nhj/Libs/opencv-4.8.1/build_install/include/opencv4",
+					/Users/nhj/Libs/FFmpeg/build/include,
+					"/Users/nhj/Codes/dev/SubtitleOCR/subocr-alg",
+				);
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/subocr-macos/cxx/opencv",
+					"$(PROJECT_DIR)/subocr-macos/cxx/ffmpeg",
+					"$(PROJECT_DIR)/subocr-macos/cxx-libs/opencv",
+					"$(PROJECT_DIR)/subocr-macos/cxx-libs/ffmpeg",
+					"$(PROJECT_DIR)/subocr-macos/cxx-libs",
+					"$(PROJECT_DIR)/subocr-macos/cxx-libs/subocr-alg",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.1.3;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = nhj.subocr;
+				PRODUCT_NAME = "望言OCR";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "subocr-macos/cxx-libs/bridging.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C9BCED082CE958BC005656CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "subocr-macos/subocr_macos.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COREML_CODEGEN_LANGUAGE = "Objective-C";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"subocr-macos/Preview Content\"";
+				DEVELOPMENT_TEAM = 4AVV3V2B9M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/Users/nhj/Libs/opencv-4.8.1/build_install/include/opencv4",
+					/Users/nhj/Libs/FFmpeg/build/include,
+					"/Users/nhj/Codes/dev/SubtitleOCR/subocr-alg",
+				);
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/subocr-macos/cxx/opencv",
+					"$(PROJECT_DIR)/subocr-macos/cxx/ffmpeg",
+					"$(PROJECT_DIR)/subocr-macos/cxx-libs/opencv",
+					"$(PROJECT_DIR)/subocr-macos/cxx-libs/ffmpeg",
+					"$(PROJECT_DIR)/subocr-macos/cxx-libs",
+					"$(PROJECT_DIR)/subocr-macos/cxx-libs/subocr-alg",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.1.3;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = nhj.subocr;
+				PRODUCT_NAME = "望言OCR";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "subocr-macos/cxx-libs/bridging.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9BCECF22CE958B9005656CD /* Build configuration list for PBXProject "subocr-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9BCED042CE958BC005656CD /* Debug */,
+				C9BCED052CE958BC005656CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9BCED062CE958BC005656CD /* Build configuration list for PBXNativeTarget "subocr-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9BCED072CE958BC005656CD /* Debug */,
+				C9BCED082CE958BC005656CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9BCECEF2CE958B9005656CD /* Project object */;
+}
