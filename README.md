@@ -31,24 +31,24 @@
 
 ## 下载使用
 
-**Mac用户**：[点此处下载mac版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/v1.1.2)
+### Mac用户：
+[点此处下载mac版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/v1.1.3)
 
 打开APP后，拖入要提取硬字幕的视频，等待提取完毕即可导出。
 <div style="text-align: center;">
   <img src="docs/mac_demo.gif" style="max-height: 300px;">
 </div>
 
-**Windows用户**：Windows版APP尚未开发完成，可使用开源Python版，[点此处查看参考步骤](README.python.md)。
-
-*本应用采用部分开源，即Python版开源，而APP版（包括Mac APP和未来的Window APP）暂不开源。*
-*APP版采用C++作为主要语言进行开发，确保为您带来极致的性能。APP商用收益将用于支持进一步开发与维护。*
+### Windows用户：
+Windows版APP预计本月底开发完成，请耐心等待。
 
 
 
 ## QQ群
 如遇使用问题，或有功能建议，欢迎加入QQ群：[960402870](https://qm.qq.com/q/Go5r1mWHuw)
 
-
+## 定制化
+APP的GUI代码已开源，并且算法库开放了接口。如有需要，您可自行定制化您的APP，[教程见此处](custom.md)。
 
 
 
