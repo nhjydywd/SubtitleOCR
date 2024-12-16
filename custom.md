@@ -1,3 +1,6 @@
+# 望言OCR
+望言OCR的GUI代码已开源，而算法库以二进制库+C接口的形式提供。本页面描述如何运行该项目。
+
 ## MacOS平台
 1. 首先Release页面下载源码和开发库(dev-libs.zip)。
 ![alt text](docs/custom_download.png)
