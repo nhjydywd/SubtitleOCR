@@ -10,14 +10,22 @@ import SwiftUI
 
 @Observable
 class SubocrWrapper{
-    let ctx = subocr_init("", "")
+    let ctx = subocr_init("")
     deinit{
         subocr_deinit(ctx)
     }
 }
 
+import Cocoa
+class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
+}
+
 @main
 struct subocr_macosApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var debug = DebugData( isDebugMode: true )
     @State var subocr = SubocrWrapper()
     

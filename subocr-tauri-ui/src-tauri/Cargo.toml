@@ -1,0 +1,33 @@
+[package]
+name = "望言OCR"
+version = "1.2.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "subocr_tauri_ui_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+bindgen = "0.69.5"
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-shell = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", features = ["blocking"] }
+tauri-plugin-dialog = "2"
+zip = "0.6"
+ts-rs = "10.1"
+base64 = "0.22.1"
+# tokio = { version = "1", features = ["full"] }
+# tauri-plugin-http = "2"
+

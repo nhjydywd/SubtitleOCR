@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "望言OCR",
+  "version": "1.2.0",
+  "identifier": "com.nhj.subocr",
+  "build": {
+    "beforeDevCommand": "yarn dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "yarn build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "望言OCR",
+        "width": 1200,
+        "height": 900
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources":[
+      "alg-resources/keys",
+      "alg-resources/models"
+    ],
+    "macOS": {
+      "minimumSystemVersion": "14.0"
+    },
+    "windows": {
+      "nsis": null,
+      "webviewInstallMode": {
+        "type": "offlineInstaller"
+      },
+      "wix": {
+        "language": "zh-CN"
+      }
+    }
+  }
+}

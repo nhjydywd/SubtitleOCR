@@ -15,7 +15,6 @@
 		C9BCEDD82CE96040005656CD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BCEDD72CE96040005656CD /* CoreMedia.framework */; };
 		C9BCEDDA2CE9606D005656CD /* liblapack.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BCEDD92CE96069005656CD /* liblapack.tbd */; };
 		C9BCEDDC2CE9607C005656CD /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BCEDDB2CE96078005656CD /* libiconv.tbd */; };
-		C9DB86EE2D0FC3B500AF8EBB /* libtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB86ED2D0FC3B100AF8EBB /* libtest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,9 +59,22 @@
 		C9DB87892D0FCF0C00AF8EBB /* utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utility.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		C9DB85A02D092C7400AF8EBB /* Exceptions for "subocr-macos" folder in "Copy Bundle Resources" phase from "subocr-macos" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = C9BCECF52CE958B9005656CD /* Resources */;
+			membershipExceptions = (
+				"cxx-libs/subocr-alg/infer.mm",
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C9BCECF92CE958B9005656CD /* subocr-macos */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C9DB85A02D092C7400AF8EBB /* Exceptions for "subocr-macos" folder in "Copy Bundle Resources" phase from "subocr-macos" target */,
+			);
 			path = "subocr-macos";
 			sourceTree = "<group>";
 		};
@@ -79,7 +91,6 @@
 				C9BCEDD62CE96011005656CD /* OpenCL.framework in Frameworks */,
 				C9BCEDD42CE96007005656CD /* libcblas.tbd in Frameworks */,
 				C9BCEDD22CE95FF9005656CD /* libbz2.tbd in Frameworks */,
-				C9DB86EE2D0FC3B500AF8EBB /* libtest.a in Frameworks */,
 				C9BCEDDA2CE9606D005656CD /* liblapack.tbd in Frameworks */,
 				C9BCEDDC2CE9607C005656CD /* libiconv.tbd in Frameworks */,
 			);
@@ -411,6 +422,7 @@
 					/Users/nhj/Libs/FFmpeg/build/include,
 					"/Users/nhj/Codes/dev/SubtitleOCR/subocr-alg",
 				);
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -426,7 +438,7 @@
 					"$(PROJECT_DIR)/subocr-macos/cxx-libs/subocr-alg",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1.3;
+				MARKETING_VERSION = 1.2.0;
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = nhj.subocr;
 				PRODUCT_NAME = "望言OCR";
@@ -458,6 +470,7 @@
 					/Users/nhj/Libs/FFmpeg/build/include,
 					"/Users/nhj/Codes/dev/SubtitleOCR/subocr-alg",
 				);
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,7 +486,7 @@
 					"$(PROJECT_DIR)/subocr-macos/cxx-libs/subocr-alg",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.1.3;
+				MARKETING_VERSION = 1.2.0;
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = nhj.subocr;
 				PRODUCT_NAME = "望言OCR";

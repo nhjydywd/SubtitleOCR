@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-pane {
+  background-color: #f0f0f0;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.right-pane {
+  background-color: #ffffff;
+
+  overflow: auto;
+}
+
+.divider {
+  width: 5px;
+  cursor: col-resize;
+  background-color: #ccc;
+  user-select: none;
+}
+
+.custom-textfield {
+  max-width: 4rem;
+  height: 2rem !important; /* 使用 !important 强制应用高度 */
+}
+
+.scrollable {
+  overflow: scroll; /* 或者 overflow: auto */
+}
+/* 针对 WebKit 浏览器隐藏滚动条 */
+.scrollable::-webkit-scrollbar {
+  display: none;
+}

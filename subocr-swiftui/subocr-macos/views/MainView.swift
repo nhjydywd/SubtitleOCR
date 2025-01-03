@@ -30,7 +30,7 @@ public struct MainView: View {
     @State private var fps = max(MIN_FPS, 10)
     @State private var minSubtitleMs = 500
     
-    @State private var autoAnalyze = !UserDefaults.standard.bool(forKey: "!autoAnalyze")
+    @State private var autoAnalyze = UserDefaults.standard.bool(forKey: "autoAnalyze")
     
     @State private var videoPath:String? = nil
     @State private var videoDecoder:OpaquePointer? = nil
@@ -42,7 +42,7 @@ public struct MainView: View {
     @State private var alertCenterAlign = false
     @State private var alertVideoError = false
     @State private var alertFrameError = false
-    @State private var alertZeroAnchors = false
+//    @State private var alertZeroAnchors = false
     @State private var alertPredetAlready = false
     @State private var alertPipelineAlready = false
     
@@ -53,7 +53,7 @@ public struct MainView: View {
     
 
     
-    @State private var detectedBBoxes:[BoundingBox] = []
+    @State private var detectedBBoxes:[(BoundingBox, SubtitleLanguage)] = []
 
     @State private var uiAnchors:[UISubtitleAnchor] = []
     
@@ -85,9 +85,7 @@ public struct MainView: View {
         VStack{
             mainScrollView
             Spacer()
-            Divider()
             Text("[Github: https://github.com/nhjydywd/SubtitleOCR](https://github.com/nhjydywd/SubtitleOCR)").font(.subheadline)
-            Text("[如果本项目对你有帮助，请点一个免费的Star吧~谢谢](https://github.com/nhjydywd/SubtitleOCR)").font(.subheadline)
         }
         .onDrop(of: [.movie], isTargeted: nil){ providers in
             if providers.count <= 0{
@@ -110,7 +108,7 @@ public struct MainView: View {
         }
         .alert("视频读取错误", isPresented: $alertVideoError, actions: {})
         .alert("视频帧错误", isPresented: $alertFrameError, actions: {})
-        .alert("缺少主字幕", isPresented: $alertZeroAnchors, actions: {}, message: {Text("至少需要有一个主字幕")})
+//        .alert("缺少主字幕", isPresented: $alertZeroAnchors, actions: {}, message: {Text("至少需要有一个主字幕")})
         .alert("分析字幕锚点", isPresented: $alertPredetAlready, actions: {
             Button(action: {startPredet(skipAlert: true)}, label: {Text("确定")})
             Button(action: {}, label: {Text("取消")})
@@ -187,15 +185,7 @@ public struct MainView: View {
                             Text("开始提取")
                         })
                         .buttonStyle(.borderedProminent)
-                        .disabled(videoPath == nil || isPredetRunning || isPipelineRunning)
-                        
-                        Button(action: {
-                            startPredet()
-                            
-                        }, label: {
-                            Text("分析字幕锚点")
-                        })
-                        .disabled(videoPath == nil || isPredetRunning || isPipelineRunning)
+                        .disabled(videoPath == nil || isPredetRunning || isPipelineRunning || uiAnchors.count <= 0 || uiAnchors.allSatisfy({!$0.isPrimary}))
                         
                         Button(action: {
                             appendAnchorsByBBoxes()
@@ -203,8 +193,18 @@ public struct MainView: View {
                             Text("添加字幕锚点")
                         })
                         .disabled(detectedBBoxes.count == 0 || isPredetRunning || isPipelineRunning)
+                        
+                        
+                        Button(action: {
+                            startPredet()
+                        }, label: {
+                            Text("分析字幕锚点")
+                        })
+                        .disabled(videoPath == nil || isPredetRunning || isPipelineRunning)
+                        
                         Spacer()
-                            .frame(maxWidth: 20)
+                        .frame(maxWidth: 20)
+                        
                         Text("FPS")
                         TextField("", value: $fps, formatter: NumberFormatter())
                             .frame(maxWidth: 30)
@@ -275,7 +275,7 @@ public struct MainView: View {
     var changeHandler:some View{
         EmptyView()
             .onChange(of: autoAnalyze){
-                UserDefaults.standard.set(!autoAnalyze, forKey: "!autoAnalyze")
+                UserDefaults.standard.set(autoAnalyze, forKey: "autoAnalyze")
             }
 //            .onChange(of: autoStart){
 //                UserDefaults.standard.set(autoStart, forKey: "autoStart")
@@ -367,7 +367,7 @@ public struct MainView: View {
         }
         let seekUs = min(currentTimestampUs, vd_get_start_us(videoDecoder) + vd_get_duration_us(videoDecoder) - 1)
         vd_seek(videoDecoder, seekUs)
-        vd_decode(videoDecoder, videoFrame, currentTimestampUs)
+        vd_decode(videoDecoder, videoFrame, currentTimestampUs, nil)
         
         let err = vf_get_error(videoFrame)!;
         if strlen(err) > 0{
@@ -384,22 +384,23 @@ public struct MainView: View {
         let data:UnsafeMutableRawPointer = vf_get_data(videoFrame)
         let bytesPerRow = vf_get_bytes_per_row(videoFrame)
         
-        let cvImage = CVImage(data: data, width: width, height: height, cv_type: CV_TYPE_8UC4, bytes_per_row: bytesPerRow)
+        let cvImage = CVImage(data: data, width: width, height: height, cv_type: CV_TYPE_8UC4(), bytes_per_row: bytesPerRow)
         
         
         let bboxArray = subocr_detect(subocr.ctx, cvImage)
-        defer{ BoundingBoxArrayFree(bboxArray) }
+        defer{ BoundingBoxArrayFree(bboxArray)}
+        let tmpAnchors = subocr_lang_cls(subocr.ctx, cvImage, bboxArray)
+        defer{ SubtitleAnchorArrayFree(tmpAnchors)}
+
         detectedBBoxes = []
         for i in 0..<bboxArray.size{
-            detectedBBoxes.append(bboxArray.data[i])
+            detectedBBoxes.append((bboxArray.data[i], tmpAnchors.data[i].lang))
         }
-//        var anchors = convertUIAnchors(uiAnchors: uiAnchors)
-//        let anchorData = anchors.withUnsafeMutableBufferPointer(){$0.baseAddress}
-//        let inputAnchors = SubtitleAnchorArray(anchors: anchorData, num: Int32(anchors.count))
+
         let anchors = WrappedSubtitleAnchors(uiAnchors: uiAnchors)
         let colors = WrappedCVColorArray(n: anchors.anchorArray.size)
         subocr_plot_bboxes(cvImage, bboxArray, anchors.anchorArray, colors.colorArray)
-//        cv_plot_bboxes(cvImage, detectedBBoxes!, anchors.inputAnchors)
+        
         
 
         
@@ -435,8 +436,12 @@ public struct MainView: View {
             print("detected bboxes is empty!")
             return
         }
-        for bbox in detectedBBoxes{
-            let uiAnchor = UISubtitleAnchor(centerX: Int(bbox.center_x), centerY: Int(bbox.center_y), height: Int(bbox.height), lang: LANG_ZH.rawValue)
+        detectedBBoxes.sort(by: {a, b in
+            return a.0.center_y < b.0.center_y
+        })
+        for (bbox, lang) in detectedBBoxes{
+            let uiAnchor = UISubtitleAnchor(centerX: Int(bbox.center_x), centerY: Int(bbox.center_y), height: Int(bbox.height), lang: lang.rawValue)
+            uiAnchor.isPrimary = (lang == LANG_ZH)
             uiAnchors.append(uiAnchor)
         }
     }
@@ -468,17 +473,17 @@ public struct MainView: View {
             fps = 5
         }
 //        var anchors = convertUIAnchors(uiAnchors: uiAnchors)
-        var hasPrimary = false;
-        for anchor in uiAnchors{
-            if(anchor.isPrimary){
-                hasPrimary = true
-                break
-            }
-        }
-        if(!hasPrimary){
-            alertZeroAnchors = true
-            return
-        }
+//        var hasPrimary = false;
+//        for anchor in uiAnchors{
+//            if(anchor.isPrimary){
+//                hasPrimary = true
+//                break
+//            }
+//        }
+//        if(!hasPrimary){
+//            alertZeroAnchors = true
+//            return
+//        }
         uiSubtitles = []
         let wrappedAnchors = WrappedSubtitleAnchors(uiAnchors: uiAnchors)
 //        let anchorData = UnsafeMutablePointer<SubtitleAnchor>.allocate(capacity: anchors.count)

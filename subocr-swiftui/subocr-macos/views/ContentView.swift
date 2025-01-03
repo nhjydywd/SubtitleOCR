@@ -8,6 +8,8 @@
 import SwiftUI
 import CoreML
 
+
+
 @Observable
 class UISubtitle{
     init(startUs: Int64, endUs: Int64, strs: [String]) {
@@ -65,7 +67,7 @@ struct ContentView: View {
             } // HSplitView
             .padding()
             .onAppear(){
-                test_extern_lib()
+//                test_extern_lib()
                 initialized = true
                 if(debug.isDebugMode){
                     openWindow(id: WINDOW_ID_DEBUG)
