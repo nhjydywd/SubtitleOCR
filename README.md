@@ -22,6 +22,9 @@
 ### Windows用户：
 由于Windows安装包过大，难以上传Github，因此请从百度网盘下载：https://pan.baidu.com/s/1gctqvGvNR0j5IZ0wSe5oTA?pwd=194x
 
+### 使用教程
+可在[哔哩哔哩](https://www.bilibili.com/video/BV1yn62YjE76/?spm_id_from=333.1387.homepage.video_card.click)观看使用教程（Windows/MacOS通用）。
+
 ## 性能
 开发望言OCR的核心出发点是优化硬字幕提取的速度。通过将硬字幕提取拆分成”解码“、”检测“、”识别“三个完全并行的阶段，并充分利用AI推理引擎，实现了硬字幕提取速度的大幅提升。
 
