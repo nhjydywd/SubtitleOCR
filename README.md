@@ -22,6 +22,8 @@
 ### Windows用户：
 由于Windows安装包过大，难以上传Github，因此请从百度网盘下载：https://pan.baidu.com/s/1gctqvGvNR0j5IZ0wSe5oTA?pwd=194x
 
+提示：经过网友反馈，Win版在win10和win7下会闪退，原因还在定位中。。。。
+
 ### 使用教程
 可在[哔哩哔哩](https://www.bilibili.com/video/BV1yn62YjE76/?spm_id_from=333.1387.homepage.video_card.click)观看使用教程（Windows/MacOS通用）。
 
