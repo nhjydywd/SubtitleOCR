@@ -13,15 +13,14 @@
 
 
 ### Mac用户：
-[点此处下载mac版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/v1.1.3)
+[点此处下载mac版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/v1.2.0)
 
-打开APP后，拖入要提取硬字幕的视频，等待提取完毕即可导出。
 <div style="text-align: center;">
   <img src="docs/mac_demo.gif" style="max-height: 300px;">
 </div>
 
 ### Windows用户：
-Windows版APP预计本月底开发完成，请耐心等待。
+由于Windows安装包过大，难以上传Github，因此请从百度网盘下载：https://pan.baidu.com/s/1gctqvGvNR0j5IZ0wSe5oTA?pwd=194x
 
 ## 性能
 开发望言OCR的核心出发点是优化硬字幕提取的速度。通过将硬字幕提取拆分成”解码“、”检测“、”识别“三个完全并行的阶段，并充分利用AI推理引擎，实现了硬字幕提取速度的大幅提升。
@@ -31,10 +30,10 @@ Windows版APP预计本月底开发完成，请耐心等待。
 | 测试平台 | [VSE](https://github.com/YaoFANGUK/video-subtitle-extractor) | [雨伞OCR](https://apps.apple.com/cn/app/%E9%9B%A8%E4%BC%9E%E8%A7%86%E9%A2%91%E5%AD%97%E5%B9%95%E6%8F%90%E5%8F%96-%E9%9F%B3%E9%A2%91-%E5%BD%95%E9%9F%B3-%E8%A7%86%E9%A2%91%E8%BD%AC%E6%96%87%E5%AD%97%E7%A1%AC%E5%AD%97%E5%B9%95%E6%8F%90%E5%8F%96/id1639976304?mt=12) | **望言OCR** |
 | :------: | :------: | :------:  | :------: |
 | M1 Macbook Air | x1.6 | x2.4  | **x10.5** |
-| M2 Macbook Air | x1.8 | x2.9  | **x15.1** |
-| M3 Macbook Pro | x2.1 | x3.5  | **x23.7** |
-| NVIDIA RTX 3060（with Intel I5 12400） | x3.3 | x4.2  | **x19.5** |
-| NVIDIA RTX 4070（with AMD R7 5800X） | x4.7 | x5.9  | **x29.6** |
+| M2 Macbook Air | x1.8 | x2.9  | **x14.9** |
+| M3 Macbook Pro | x2.1 | x3.5  | **x21.7** |
+| NVIDIA RTX 3060（with Intel I5 12400） | x3.3 | x4.2  | **x17.4** |
+| NVIDIA RTX 4070（with AMD R7 5800X） | x4.7 | x5.9  | **x28.6** |
 
 您实际运行的速度可能受具体视频、CPU性能和GPU型号的影响，但不会有太多偏差。
 
