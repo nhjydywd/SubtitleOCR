@@ -23,11 +23,11 @@
 
 下面是一个性能测试的结果，测试视频为一段45分钟的含有中英双语字幕的视频，对比的对象是另外两个同类工具，分别在M1、M2和M3芯片的Mac平台上进行测试：（x后面的数字表示能达到几倍速）
 
-| 测试平台 | [某开源工具](https://github.com/YaoFANGUK/video-subtitle-extractor) | [某闭源工具](https://apps.apple.com/cn/app/%E9%9B%A8%E4%BC%9E%E8%A7%86%E9%A2%91%E5%AD%97%E5%B9%95%E6%8F%90%E5%8F%96-%E9%9F%B3%E9%A2%91-%E5%BD%95%E9%9F%B3-%E8%A7%86%E9%A2%91%E8%BD%AC%E6%96%87%E5%AD%97%E7%A1%AC%E5%AD%97%E5%B9%95%E6%8F%90%E5%8F%96/id1639976304?mt=12) | **望言OCR** |
+| 测试平台 | [VSE](https://github.com/YaoFANGUK/video-subtitle-extractor) | [雨伞OCR](https://apps.apple.com/cn/app/%E9%9B%A8%E4%BC%9E%E8%A7%86%E9%A2%91%E5%AD%97%E5%B9%95%E6%8F%90%E5%8F%96-%E9%9F%B3%E9%A2%91-%E5%BD%95%E9%9F%B3-%E8%A7%86%E9%A2%91%E8%BD%AC%E6%96%87%E5%AD%97%E7%A1%AC%E5%AD%97%E5%B9%95%E6%8F%90%E5%8F%96/id1639976304?mt=12) | **望言OCR** |
 | :------: | :------: | :------:  | :------: |
-| M1 Macbook Air | x1.6 | x2.4  | **x9.0** |
-| M2 Macbook Air | x1.8 | x2.9  | **x10.5** |
-| M3 Macbook Pro | x2.1 | x3.5  | **x12.1** |
+| M1 Macbook Air | x1.6 | x2.4  | **x10.5** |
+| M2 Macbook Air | x1.8 | x2.9  | **x15.1** |
+| M3 Macbook Pro | x2.1 | x3.5  | **x23.7** |
 
 ## 下载使用
 
