@@ -20,9 +20,10 @@
 </div>
 
 ### Windows用户：
-由于Windows安装包过大，难以上传Github，因此请从百度网盘下载：https://pan.baidu.com/s/1gctqvGvNR0j5IZ0wSe5oTA?pwd=194x
+APP支持Win11/Win10。由于安装包过大，因此请从百度网盘下载：https://pan.baidu.com/s/1gctqvGvNR0j5IZ0wSe5oTA?pwd=194x
 
-提示：经过网友反馈，Win版在win10和win7下会闪退，原因还在定位中。。。。
+Win10用户需要额外下载一个防闪退补丁（将补丁中的3个dll替换到APP文件夹中）：https://pan.baidu.com/s/1PeC5Y8zlnhP5gIcGhRaOuQ?pwd=h3ea
+
 
 ### 使用教程
 可在[哔哩哔哩](https://www.bilibili.com/video/BV1yn62YjE76/?spm_id_from=333.1387.homepage.video_card.click)观看使用教程（Windows/MacOS通用）。
