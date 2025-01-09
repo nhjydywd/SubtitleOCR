@@ -22,7 +22,7 @@
 ### Windows用户：
 [点此处下载Windows版APP](https://pan.baidu.com/s/1cG9dUajZsYSvRD9IoryiVQ?pwd=6npr)
 
-开发时使用的配置：Win11 + I5 12400 + NVIDIA RTX 3060
+开发者使用的配置：Win11 + I5 12400 + NVIDIA RTX 3060
 
 已确认的最低可运行配置：Win10 + i5-7200U + NVIDIA MX150（较慢，约1.1倍速）
 
