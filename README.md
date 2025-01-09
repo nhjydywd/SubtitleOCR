@@ -20,7 +20,7 @@
 </div>
 
 ### Windows用户：
-APP支持Win11/Win10。由于安装包过大，因此请从百度网盘下载：https://pan.baidu.com/s/1gctqvGvNR0j5IZ0wSe5oTA?pwd=194x
+[点此处下载Windows版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/v1.2.0)
 
 开发时使用的配置：Win11 + I5 12400 + NVIDIA RTX 3060
 
