@@ -20,7 +20,7 @@
 </div>
 
 ### Windows用户：
-[点此处下载Windows版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/v1.2.0)
+[点此处下载Windows版APP]([https://github.com/nhjydywd/SubtitleOCR/releases/tag/v1.2.0](https://pan.baidu.com/s/1cG9dUajZsYSvRD9IoryiVQ?pwd=6npr))
 
 开发时使用的配置：Win11 + I5 12400 + NVIDIA RTX 3060
 
