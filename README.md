@@ -22,7 +22,9 @@
 ### Windows用户：
 APP支持Win11/Win10。由于安装包过大，因此请从百度网盘下载：https://pan.baidu.com/s/1gctqvGvNR0j5IZ0wSe5oTA?pwd=194x
 
-Win10用户需要额外下载一个防闪退补丁（将补丁中的3个dll替换到APP文件夹中）：https://pan.baidu.com/s/1PeC5Y8zlnhP5gIcGhRaOuQ?pwd=h3ea
+开发时使用的配置：Win11 + I5 12400 + NVIDIA RTX 3060
+
+已确认的最低可运行配置：Win10 + i5-7200U + NVIDIA MX150（较慢，约1.1倍速）
 
 
 ### 使用教程
