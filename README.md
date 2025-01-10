@@ -13,14 +13,14 @@
 
 
 ### Mac用户：
-[点此处下载mac版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/v1.2.1)
+[点此处下载mac版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/1.2.1)
 
 <div style="text-align: center;">
   <img src="docs/mac_demo.gif" style="max-height: 300px;">
 </div>
 
 ### Windows用户：
-[点此处下载Windows版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/v1.2.1)
+[点此处下载Windows版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/1.2.1)
 
 开发者使用的配置：Win11 + I5 12400 + NVIDIA RTX 3060
 
