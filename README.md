@@ -22,8 +22,6 @@
 ### Windows用户：
 [点此处下载Windows版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/1.2.1)
 
-开发者使用的配置：Win11 + I5 12400 + NVIDIA RTX 3060
-
 已确认的最低可运行配置：Win10(22H2) + i5-7200U + NVIDIA MX150（较慢，约1.1倍速）
 
 AMD显卡: 已测试7000系显卡可运行（测试型号：AMD 7900XT）
