@@ -17,7 +17,7 @@ MacOS版使用SwiftUI构建。如果您对Swift和SwiftUI不熟悉，可以查�
 
 
 ## Windows平台
-Windows平台使用[Tauri](https://github.com/tauri-apps/tauri)+[React](https://github.com/facebook/react)+[Typescript](https://github.com/microsoft/TypeScript)进行构建，在进行开发前您需要具有少量Rust和React-TS知识，并需要您具有 `node` & `yarn` 环境。
+Windows平台使用[Tauri](https://github.com/tauri-apps/tauri)+[React](https://github.com/facebook/react)+[Typescript](https://github.com/microsoft/TypeScript)进行构建，在进行开发前您需要具有少量Rust和React-TS知识，并需要您具有`node` & `yarn`环境。
 
 1. 首先在Release页面下载APP、源码及`subocr.lib`。注意一定要在同一个Release页面下载这些文件，因为不同版本接口有可能不同。
 ![alt text](docs/custom_win_download.png)
