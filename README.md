@@ -28,7 +28,7 @@
 
 AMD显卡: 已测试7000系显卡可运行（测试型号：AMD 7900XT）
 
-注意，Windows仍存一些未知原因导致的闪退问题（集中在APP启动阶段）。如果您启动APP后没有闪退，说明您的环境没有问题，可以放心使用。
+如果您遇到闪退问题，更新VC++库即可解决：[https://aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 
 ### 使用教程
