@@ -84,8 +84,8 @@ public struct MainView: View {
     public var body: some View{
         VStack{
             mainScrollView
-            Spacer()
-            Text("[Github: https://github.com/nhjydywd/SubtitleOCR](https://github.com/nhjydywd/SubtitleOCR)").font(.subheadline)
+//            Spacer()
+//            Text("[Github: https://github.com/nhjydywd/SubtitleOCR](https://github.com/nhjydywd/SubtitleOCR)").font(.subheadline)
         }
         .onDrop(of: [.movie], isTargeted: nil){ providers in
             if providers.count <= 0{

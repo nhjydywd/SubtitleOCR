@@ -86,11 +86,21 @@ function MainView() {
   const [sliderValue, setSliderValue] = useState(0);
 
   const [opened, setOpened] = useState(false);
+  // const [device, setDevice] = useState<number>(0);
 
   const isInputDisabled = useMemo(() => videoUrl.length <= 0 || isPredetRunning || isPipelineRunning, 
                 [videoUrl, isPredetRunning, isPipelineRunning]);
   const isBeginDisabled = useMemo(() => anchors.length <= 0 || anchors.every(anchor => anchor.is_primary===0), [anchors]);
 
+  // const handleDevice = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   const newValue = parseInt(event.target.value, 10);
+  //   if (!isNaN(newValue)) {
+  //     var value = Math.min(newValue, 999);
+  //     value = Math.max(value, 0);
+  //     setDevice(value);
+  //     invoke("set_device", { device: value });
+  //   }
+  // }
   const handleFps = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.value);
     const newValue = parseInt(event.target.value, 10);
@@ -470,6 +480,17 @@ function MainView() {
               }
               label="显示设置"
             />
+            {/* <Stack direction={"row"} alignItems={"center"} alignContent={"center"} style={{marginLeft:"2rem"}}>
+                    <Typography>推理设备号: </Typography>
+                    <TextField disabled={isInputDisabled}
+                      variant="standard" size="small"
+                      type="number"
+                      className="custom-textfield"
+                      value={device}
+                      style={{maxWidth:"3rem", width: "2.5rem", marginLeft: "0.5rem"}}
+                      onChange={handleDevice}
+                      />
+            </Stack> */}
           </Stack>
           <Collapse in={opened} style={{marginTop:"0.5rem",marginBottom:"0.5rem"}}>
             <Card>

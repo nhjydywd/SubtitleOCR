@@ -26,18 +26,19 @@ static mut VDHEIGHT: i32 = 0;
 
 #[tauri::command]
 fn is_preinited()->bool{
-    let _lock = MTX.lock().expect("Failed to acquire lock");
-    unsafe{
-        let path_resources = PATH_RESOURCES.lock().unwrap();
-        let c_str = CString::new(path_resources.clone()).expect("CString::new failed");
-        let c_str_path_resources = c_str.as_ptr();
-        let res = subocr_is_preinited(c_str_path_resources);
-        if res != 0 {
-            return true;
-        }else{
-            return false;
-        }
-    }
+    return true;
+    // let _lock = MTX.lock().expect("Failed to acquire lock");
+    // unsafe{
+    //     let path_resources = PATH_RESOURCES.lock().unwrap();
+    //     let c_str = CString::new(path_resources.clone()).expect("CString::new failed");
+    //     let c_str_path_resources = c_str.as_ptr();
+    //     let res = subocr_is_preinited(c_str_path_resources);
+    //     if res != 0 {
+    //         return true;
+    //     }else{
+    //         return false;
+    //     }
+    // }
 }
 
 #[tauri::command]
@@ -45,6 +46,17 @@ fn is_inited()->bool{
     let _lock = MTX.lock().expect("Failed to acquire lock");
     unsafe{
         return SUBOCR != null_mut();
+    }
+}
+
+#[tauri::command]
+fn set_device(device: i32){
+    let _lock = MTX.lock().expect("Failed to acquire lock");
+    unsafe{
+        subocr_deinit(SUBOCR);
+        let path_resources = PATH_RESOURCES.lock().unwrap();
+        let c_str_path_resources = CString::new(path_resources.clone()).expect("CString::new failed");
+        SUBOCR = subocr_init(c_str_path_resources.as_ptr(), device);
     }
 }
 
@@ -289,6 +301,13 @@ extern "C" {
 }
 
 
+use std::ffi::OsStr;
+use std::os::windows::ffi::OsStrExt;
+use std::slice;
+
+fn utf8_to_utf16(s: &str) -> Vec<u16> {
+    OsStr::new(s).encode_wide().collect()
+}
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -303,22 +322,25 @@ pub fn run() {
         let mut foo = PATH_RESOURCES.lock().unwrap();
         *foo = str_path_resources;
         
-        std::thread::spawn(|| {
-            unsafe{
-                let str_path:CString;
-                {
-                    let path_resources = PATH_RESOURCES.lock().unwrap();
-                    str_path = CString::new(path_resources.clone()).expect("CString::new failed");
-                }
-                let c_str_path_resources = str_path.as_ptr();
-                println!("c_str_path_resources: {:?}", c_str_path_resources);
-                println!("str_path_resources: {:?}", str_path);
-                if subocr_is_preinited(c_str_path_resources) == 0{
-                    subocr_preinit(c_str_path_resources);
-                }
-                SUBOCR = subocr_init(c_str_path_resources);
-            }
-        });
+        let c_str_path_resources = CString::new((*foo).clone()).expect("CString::new failed");
+        SUBOCR = subocr_init(c_str_path_resources.as_ptr(), 0);
+        
+        // std::thread::spawn(|| {
+        //     unsafe{
+        //         let str_path:CString;
+        //         {
+        //             let path_resources = PATH_RESOURCES.lock().unwrap();
+        //             str_path = CString::new(path_resources.clone()).expect("CString::new failed");
+        //         }
+        //         let c_str_path_resources = str_path.as_ptr();
+        //         println!("c_str_path_resources: {:?}", c_str_path_resources);
+        //         println!("str_path_resources: {:?}", str_path);
+        //         if subocr_is_preinited(c_str_path_resources) == 0{
+        //             subocr_preinit(c_str_path_resources);
+        //         }
+        //         SUBOCR = subocr_init(c_str_path_resources);
+        //     }
+        // });
         println!("\n\n\nsetup finished!\n\n\n");
 
         // let path_resources = app.path().resolve("alg-resources", BaseDirectory::Resource)

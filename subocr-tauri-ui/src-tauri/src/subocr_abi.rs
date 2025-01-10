@@ -260,7 +260,7 @@ unsafe extern "C" {
     pub fn subocr_preinit(pathResources: *const ::std::os::raw::c_char);
 }
 unsafe extern "C" {
-    pub fn subocr_init(pathResources: *const ::std::os::raw::c_char) -> *mut SubocrContext;
+    pub fn subocr_init(pathResources: *const ::std::os::raw::c_char, device: ::std::os::raw::c_int) -> *mut SubocrContext;
 }
 unsafe extern "C" {
     pub fn subocr_deinit(ctx: *mut SubocrContext);
