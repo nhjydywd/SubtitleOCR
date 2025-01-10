@@ -24,7 +24,11 @@
 
 开发者使用的配置：Win11 + I5 12400 + NVIDIA RTX 3060
 
-已确认的最低可运行配置：Win10 + i5-7200U + NVIDIA MX150（较慢，约1.1倍速）
+已确认的最低可运行配置：Win10(22H2) + i5-7200U + NVIDIA MX150（较慢，约1.1倍速）
+
+AMD显卡: 已测试7000系显卡可运行（测试型号：AMD 7900XT）
+
+注意，Windows仍存一些未知原因导致的闪退问题（集中在APP启动阶段）。如果您启动APP后没有闪退，说明您的环境没有问题，可以放心使用。
 
 
 ### 使用教程
@@ -40,8 +44,8 @@
 | M1 Macbook Air | x1.6 | x2.4  | **x10.5** |
 | M2 Macbook Air | x1.8 | x2.9  | **x14.9** |
 | M3 Macbook Pro | x2.1 | x3.5  | **x21.7** |
-| NVIDIA RTX 3060（with Intel I5 12400） | x3.3 | x4.2  | **x17.4** |
-| NVIDIA RTX 4070（with AMD R7 5800X） | x4.7 | x5.9  | **x28.6** |
+| NVIDIA RTX 3060（with Intel I5 12400） | x3.3 | x4.2  | **x15.2** |
+| NVIDIA RTX 4070（with AMD R7 5800X） | x4.7 | x5.9  | **x24.1** |
 
 您实际运行的速度可能受具体视频、CPU性能和GPU型号的影响，但不会有太多偏差。
 
