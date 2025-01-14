@@ -24,8 +24,6 @@
 
 已确认的最低可运行配置：Win10(22H2) + i5-7200U + NVIDIA MX150（较慢，约1.1倍速）
 
-AMD显卡: 已测试7000系显卡可运行（测试型号：AMD 7900XT）
-
 如果您遇到闪退问题，更新VC++库即可解决：[https://aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 
