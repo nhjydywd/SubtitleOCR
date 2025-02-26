@@ -11,7 +11,32 @@
   <img src="docs/AppIcon_256pt.png" style="max-height: 80px;max-width: 80px;">
 </div>
 
+## 商业化版本
+望言OCR的最后一个开源版本是v1.2.1，商业化版本已经更新到了v1.4.7，功能特性如下：
+| 功能特性 | 开源版v1.2.1 | 商业版v1.4.7 |
+| :------: | :------: | :------:  | 
+| 批量提取 | ❌ | ✅  |
+| 甄别错误识别结果 | ❌ | ✅  |
+| 中文空格识别 | ❌ | ✅  |
+| 中文繁体识别 | ❌ | ✅  |
+| SRT导出 | ✅ | ✅  |
+| ASS导出 | ❌ | ✅  |
+| TXT导出 | ❌ | ✅  |
+| 字幕编辑 | ❌ | ✅  |
+| H.265解码器优化 | ❌ | ✅  |
 
+更多功能，您可下载商业版试用：
+
+Mac：https://apps.apple.com/cn/app/%E6%9C%9B%E8%A8%80ocr/id6738074717?mt=12
+
+Windows：https://pan.baidu.com/s/1muf9eM9BtGFKKtMCQpZ6WQ?pwd=w2ei
+
+开源版目前不再更新，商业版的功能会越来越强大。商业版目前处于一个较低的价格，随着功能的越来越多会逐步涨价，现在入手即可以一个比较低的价格锁定权益。
+
+
+
+
+## 下载开源版本
 ### Mac用户：
 [点此处下载mac版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/1.2.1)
 
@@ -21,10 +46,6 @@
 
 ### Windows用户：
 [点此处下载Windows版APP](https://github.com/nhjydywd/SubtitleOCR/releases/tag/1.2.1)
-
-已确认的最低可运行配置：Win10(22H2) + i5-7200U + NVIDIA MX150（较慢，约1.1倍速）
-
-如果您遇到闪退问题，更新VC++库即可解决：[https://aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 
 ### 使用教程
