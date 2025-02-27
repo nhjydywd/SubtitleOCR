@@ -31,6 +31,8 @@ Mac：https://apps.apple.com/cn/app/%E6%9C%9B%E8%A8%80ocr/id6738074717?mt=12
 
 Windows：https://pan.baidu.com/s/1muf9eM9BtGFKKtMCQpZ6WQ?pwd=w2ei
 
+对应的视频教程：https://www.bilibili.com/video/BV1FUAHehEns/?vd_source=48fff58090109fe7eb61febbc62c153b
+
 开源版目前不再更新，商业版的功能会越来越强大。商业版目前处于一个较低的价格，随着功能的越来越多会逐步涨价，现在入手即可以一个比较低的价格锁定权益。
 
 
