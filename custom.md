@@ -1,5 +1,6 @@
 # 修改与定制
 望言OCR的GUI代码已开源，而算法库以二进制库+C接口的形式提供。本页面描述如何运行该项目。
+（对本项目的修改与发布，需遵守GPLv3协议）
 
 ## MacOS平台
 MacOS版使用SwiftUI构建。如果您对Swift和SwiftUI不熟悉，可以查看[苹果官方文档](https://developer.apple.com/xcode/swiftui/)，或查看[Hacking with Swift系列教程](https://www.hackingwithswift.com/100/swiftui)。
