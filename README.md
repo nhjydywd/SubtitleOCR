@@ -59,7 +59,7 @@
 
 更多功能，您可下载专业版试用：
 
-Windows：https://pan.baidu.com/s/1muf9eM9BtGFKKtMCQpZ6WQ?pwd=w2ei
+Windows：[https://pan.baidu.com/s/1muf9eM9BtGFKKtMCQpZ6WQ?pwd=w2ei](https://drive.google.com/drive/folders/1cU7Ppf_CQJM6joLvlMo32NUAkWP1Waau?usp=drive_link)
 
 Mac：https://apps.apple.com/cn/app/%E6%9C%9B%E8%A8%80ocr/id6738074717?mt=12
 
